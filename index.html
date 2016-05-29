@@ -1,45 +1,72 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>The Ice Creamery</title>
-    <!-- <link href="styles/base/base.css" type="text/css" rel="stylesheet"> -->
-  </head>
-  <body>
-    <header class="site-header">
-      <h1>Welcome To The Ice Creamery</h1>
-    </header>
-    <section id="home-container">
-      <article>
-        <p>We offer 3 great products! Choose your treat!</p>
-      </article>
-      <div id="product1">
-        <input id="ic-button" type="button" name="product" value="icecream"/>
-      </div>
-      <div id="product2">
-        <input id="ms-button" type="button" name="product" value="milkshake"/>
-      </div>
-      <div id="product3">
-        <input id="fl-button" type="button" name="product" value="float"/>
-      </div>
-    </section>
-    <section id="ic-order-container">
-    </section>
-    <section id="ms-order-container">
-    </section>
-    <section id="fl-order-container">
-    </section>
-    <footer>
-      &copy; 2016 The Ice Creamery | Tasty Treats Since 2016
-    </footer>
-    <script src="vendors/scripts/jquery-2.2.0.js"></script>
-    <script src="vendors/scripts/page.js"></script>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="styles/module/milkshakeform.css" rel="stylesheet">
+  <title>The Ice Creamery</title>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Welcome To The Ice Creamery</h1>
+  </header>
+  <section id="home-container">
+    <article>
+      <p>We offer 3 great products! Choose your treat!</p>
+    </article>
+    <div id="product1">
+      <input id="ic-button" type="button" name="product" value="Ice Cream"/>
+    </div>
+    <div id="product2">
+      <input id="ms-button" type="button" name="product" value="Milk Shake"/>
+    </div>
+    <div id="product3">
+      <input id="fl-button" type="button" name="product" value="Float"/>
+    </div>
+  </section>
+  <section id="ic-order-container">
+  </section>
+  <section id="ms-order-container">
+    <form id="ms-form">
+      <fieldset>
+      <legend>Milk Shake</legend>
 
-    <script src="scripts/model/product.js"></script>
+        <ul id="ms-scoops"
+          <li>
+            <select id="msflavor-filter">
+              <option value="">--Choose a Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="strawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="richness-filter">
+              <option value="">--Choose your Richness--</option>
+              <option value="skim">Skim Milk</option>
+              <option value="percent">2 Percent</option>
+              <option value="whole">Whole Milk</option>
+            </select>
+          </li>
+        </ul>
+        <input id="ms-order" type = "button" value="Place Order"/>
+      </fielset>
+    </form>
+  </section>
+  <section id="fl-order-container">
+  </section>
+  <footer>
+    &copy; 2016 The Ice Creamery | Tasty Treats Since 2016
+  </footer>
+  <script src="vendors/scripts/jquery-2.2.0.js"></script>
+  <script src="vendors/scripts/page.js"></script>
 
-    <script src="scripts/controller/productController.js"></script>
+  <script src="scripts/controller/productController.js"></script>
+  <script src="scripts/view/milkShakeView.js"></script>
+  <script src="scripts/model/milkshake.js"></script>
 
-    <script src="scripts/routes.js"></script>
-  </body>
-  </html>
+  <script src="scripts/routes.js"></script>
+</body>
+</html>

@@ -7,10 +7,11 @@
       console.log(product);
     });
 
-    $('#ms-button').on('click', function() {
-      var product = 'milkshake';
-      console.log(product);
-    });
+    $('#ms-button').on('click', milkShakeView.create);
+    //   var product = 'milkshake';
+    //   console.log(product);
+    //
+    // });
 
     $('#fl-button').on('click', function() {
       var product = 'float';
