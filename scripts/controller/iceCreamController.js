@@ -15,7 +15,7 @@
     //     $('#icflavortwo-filter').show();
     //   }
     // })
-    $('#ic-order').on('click', function() {
+    $('#ic-order').off().on('click', function() {
       var curIceCreamOrder = new IceCream ({
         scoops: $('#icscoops-filter').val(),
         flavorOne: $('#icflavorone-filter').val(),
@@ -24,7 +24,8 @@
       });
       console.log(curIceCreamOrder);
     });
-  }
+    $('#ic-cancel').on('click', productController.index);
+  };
 
   module.iceCreamController = iceCreamController;
 })(window);

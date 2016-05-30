@@ -17,7 +17,7 @@
       });
       console.log('Float', curFloatOrder);
     });
-    $('#fl-cancel').on('click', productController.index)
+    $('#fl-cancel').on('click', productController.index);
   };
 
   module.floatController = floatController;
