@@ -6,5 +6,5 @@
     this.vessel = opts.vessel;
     this.price = opts.scoops * 1.5
   };
-  module.IceCream = IceCream
+  module.IceCream = IceCream;
 })(window);
