@@ -2,7 +2,7 @@
   var iceCreamController = {};
 
   iceCreamController.create = function() {
-    $('#ic-order-container').show();
+    $('#icecream-order-container').show();
     $('#icflavorone-filter').hide();
     $('#icflavortwo-filter').hide();
     $('#icscoops-filter').on('change', function() {
