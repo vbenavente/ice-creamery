@@ -2,16 +2,9 @@
   var productController = {}
 
   productController.index = function(ctx, next) {
-    $('#ic-button').on('click', function() {
-      var product = 'ice cream';
-      console.log(product);
-    });
+    $('#ic-button').on('click', iceCreamController.create);
 
     $('#ms-button').on('click', milkShakeView.create);
-    //   var product = 'milkshake';
-    //   console.log(product);
-    //
-    // });
 
     $('#fl-button').on('click', function() {
       var product = 'float';

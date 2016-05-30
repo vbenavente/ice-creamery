@@ -1,6 +1,6 @@
 (function(module) {
 
-  function MilkShake (opts) {
+  function MilkShake(opts) {
     this.flavor = opts.flavor;
     this.richness = opts.richness;
     this.discount = 0.10;

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="vendors/styles/normalize.css" rel="stylesheet">
   <link href="styles/module/milkshakeform.css" rel="stylesheet">
   <title>The Ice Creamery</title>
 </head>
@@ -25,13 +26,55 @@
     </div>
   </section>
   <section id="ic-order-container">
+    <form id="ic-form">
+      <fieldset>
+      <legend>Ice Cream</legend>
+        <ul id="ic-scoops">
+          <li>
+            <select id="icscoops-filter">
+              <option value="">--One or Two Scoops--</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+            </select>
+          </li>
+          <li>
+            <select id="icflavorone-filter">
+              <option value="">--Scoop One Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="stawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="icflavortwo-filter">
+              <option value="">--Scoop Two Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="stawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="icvessel-filter">
+              <option value="">--Waffle Cone or Cup</option>
+              <option value="waffle cone">Waffle Cone</option>
+              <option value="cup">Cup</option>
+            </select>
+          </li>
+        </ul>
+        <input id="ic-order" type="button" value="Place Order"/>
+      </fieldset>
+    </form>
   </section>
   <section id="ms-order-container">
-    <form id="ms-form">
+    <form class="form">
       <fieldset>
       <legend>Milk Shake</legend>
 
-        <ul id="ms-scoops"
+        <ul id="ms-scoops">
           <li>
             <select id="msflavor-filter">
               <option value="">--Choose a Flavor--</option>
@@ -51,7 +94,7 @@
             </select>
           </li>
         </ul>
-        <input id="ms-order" type = "button" value="Place Order"/>
+        <input id="ms-order" type="button" value="Place Order"/>
       </fielset>
     </form>
   </section>
@@ -64,7 +107,11 @@
   <script src="vendors/scripts/page.js"></script>
 
   <script src="scripts/controller/productController.js"></script>
+  <script src="scripts/controller/iceCreamController.js"></script>
+
   <script src="scripts/view/milkShakeView.js"></script>
+
+  <script src="scripts/model/iceCream.js"></script>
   <script src="scripts/model/milkshake.js"></script>
 
   <script src="scripts/routes.js"></script>
