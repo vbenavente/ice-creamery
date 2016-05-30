@@ -1,6 +1,6 @@
 (function(module) {
 
-  orderSummaryList = [];
+  Order.orders = [];
 
   function Order(opts) {
     this.type = opts.type;

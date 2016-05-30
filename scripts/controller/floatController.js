@@ -56,6 +56,11 @@
         soda: $('.soda-filter').val()
       });
       console.log('Float', curFloatOrder);
+      var orderHistory = new Order ({
+        type: "float",
+        data: curFloatOrder
+      });
+      Order.orders.push(orderHistory);
     });
     $('#fl-cancel').on('click', productController.index);
   };
