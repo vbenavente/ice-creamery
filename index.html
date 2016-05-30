@@ -26,13 +26,13 @@
     </div>
   </section>
   <section id="ic-order-container">
-    <form id="ic-form">
+    <form class="form">
       <fieldset>
       <legend>Ice Cream</legend>
-        <ul id="ic-scoops">
+        <ul>
           <li>
             <select id="icscoops-filter">
-              <option value="">--One or Two Scoops--</option>
+              <option value="">--Scoops--</option>
               <option value="1">One</option>
               <option value="2">Two</option>
             </select>
@@ -74,7 +74,7 @@
       <fieldset>
       <legend>Milk Shake</legend>
 
-        <ul id="ms-scoops">
+        <ul>
           <li>
             <select id="msflavor-filter">
               <option value="">--Choose a Flavor--</option>
@@ -99,6 +99,83 @@
     </form>
   </section>
   <section id="fl-order-container">
+    <form class="form">
+      <fieldset>
+      <legend>Float</legend>
+
+        <ul>
+          <li>
+            <select id='flscoops-filter'>
+              <option value="">--Scoops--</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="4">Five</option>
+            </select>
+          </li>
+          <li>
+            <select id="flflavorone-filter">
+              <option value="">--Scoop One Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="stawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="flflavortwo-filter">
+              <option value="">--Scoop Two Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="stawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="flflavorthree-filter">
+              <option value="">--Scoop Three Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="stawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="flflavorfour-filter">
+              <option value="">--Scoop Four Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="stawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="flflavorfive-filter">
+              <option value="">--Scoop Five Flavor--</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="chocolate">Chocolate</option>
+              <option value="stawberry">Strawberry</option>
+              <option value="coffee">Coffee</option>
+              <option value="praline">Praline</option>
+            </select>
+          </li>
+          <li>
+            <select id="soda-filter">
+              <option value="">--Choose a Soda--</option>
+              <option value="coke">Coke</option>
+              <option value="rootbeer">Root Beer</option>
+              <option value="orange">Orange</option>
+            </select>
+          </li>
+        </ul>
+        <input id="fl-order" type="button" value="Place Order"/>
+      </fieldset>
+    </form>
   </section>
   <footer>
     &copy; 2016 The Ice Creamery | Tasty Treats Since 2016
@@ -108,11 +185,12 @@
 
   <script src="scripts/controller/productController.js"></script>
   <script src="scripts/controller/iceCreamController.js"></script>
-
-  <script src="scripts/view/milkShakeView.js"></script>
+  <script src="scripts/controller/milkShakeController.js"></script>
+  <script src="scripts/controller/floatController.js"></script>
 
   <script src="scripts/model/iceCream.js"></script>
   <script src="scripts/model/milkshake.js"></script>
+  <script src="scripts/model/float.js"></script>
 
   <script src="scripts/routes.js"></script>
 </body>
