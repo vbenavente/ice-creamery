@@ -3,6 +3,7 @@
 
 
   milkShakeView.create = function() {
+    $('#home-container').hide();
     $('#milkshake-order-container').show();
     $('#ms-order').on('click', function() {
       var curMilkShakeOrder = new MilkShake ({
