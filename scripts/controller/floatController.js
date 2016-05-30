@@ -3,7 +3,7 @@
   var floatController = {};
 
   floatController.create = function() {
-    $('#fl-order-container').show();
+    $('#float-order-container').show();
     $('#fl-order').on('click', function() {
       var curFloatOrder = new Float ({
         scoops: $('#flscoops-filter').val(),

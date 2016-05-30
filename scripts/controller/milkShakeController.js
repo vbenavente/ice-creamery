@@ -3,7 +3,7 @@
 
 
   milkShakeView.create = function() {
-    $('#ms-order-container').show();
+    $('#milkshake-order-container').show();
     $('#ms-order').on('click', function() {
       var curMilkShakeOrder = new MilkShake ({
         flavor: $('#msflavor-filter').val(),
