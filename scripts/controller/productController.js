@@ -4,11 +4,11 @@
   productController.index = function() {
     $('#home-container').show();
     $('.container').hide();
-    $('#ic-button').on('click', iceCreamController.create);
+    $($('.button')[0]).on('click', iceCreamController.create);
 
-    $('#ms-button').on('click', milkShakeView.create);
+    $($('.button')[1]).on('click', milkShakeView.create);
 
-    $('#fl-button').on('click', floatController.create);
+    $($('.button')[2]).on('click', floatController.create);
   };
 
 
