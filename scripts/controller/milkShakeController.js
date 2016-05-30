@@ -5,7 +5,7 @@
   milkShakeView.create = function() {
     $('#home-container').hide();
     $($('.container')[1]).show();
-    $('#ms-order').off().on('click', function() {
+    $('#ms-order').off().on('click', orderView.makeTable, function() {
       var curMilkShakeOrder = new MilkShake ({
         flavor: $('.js-milkshake-flavor').val(),
         richness: $('.richness-filter').val()
@@ -16,6 +16,7 @@
         data: curMilkShakeOrder
       });
       Order.orders.push(orderHistory);
+      orderView.makeTable(Order.orders);
     });
     $('#ms-cancel').on('click', productController.index);
   }
