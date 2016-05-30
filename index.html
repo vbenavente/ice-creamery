@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="vendors/styles/normalize.css" rel="stylesheet">
   <link href="styles/module/milkshakeform.css" rel="stylesheet">
   <title>The Ice Creamery</title>
 </head>
@@ -24,7 +25,7 @@
       <input id="fl-button" type="button" name="product" value="Float"/>
     </div>
   </section>
-  <section class="order-container">
+  <section id="ic-order-container">
     <form id="ic-form">
       <fieldset>
       <legend>Ice Cream</legend>
@@ -68,8 +69,8 @@
       </fieldset>
     </form>
   </section>
-  <section class="order-container">
-    <form id="ms-form">
+  <section id="ms-order-container">
+    <form class="form">
       <fieldset>
       <legend>Milk Shake</legend>
 
@@ -97,7 +98,7 @@
       </fielset>
     </form>
   </section>
-  <section class="order-container">
+  <section id="fl-order-container">
   </section>
   <footer>
     &copy; 2016 The Ice Creamery | Tasty Treats Since 2016
