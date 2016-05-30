@@ -1,16 +1,12 @@
 (function(module) {
   var productController = {}
 
-  productController.index = function(ctx, next) {
+  productController.index = function() {
     $('#ic-button').on('click', iceCreamController.create);
 
     $('#ms-button').on('click', milkShakeView.create);
 
-    $('#fl-button').on('click', function() {
-      var product = 'float';
-      console.log(product);
-    });
-    // next();
+    $('#fl-button').on('click', floatController.create);
   };
 
 

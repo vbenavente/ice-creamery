@@ -12,7 +12,7 @@
         flavorThree: $('#flflavorthree-filter').val(),
         flavorFour: $('#flflavorfour-filter').val(),
         flavorFive: $('#flflavorfive-filter').val(),
-        soda: $('soda-filter').val()
+        soda: $('#soda-filter').val()
       });
       console.log('Float', curFloatOrder);
     });
