@@ -24,6 +24,11 @@
         vessel: $('.vessel-filter').val()
       });
       console.log(curIceCreamOrder);
+      var orderHistory = new Order ({
+        type: "ice cream",
+        data: curIceCreamOrder
+      });
+      Order.orders.push(orderHistory);
     });
     $('#ic-cancel').on('click', productController.index);
   };
