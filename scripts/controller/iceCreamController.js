@@ -2,28 +2,31 @@
   var iceCreamController = {};
 
   iceCreamController.create = function() {
-    $('#icecream-order-container').show();
-    $('#icflavorone-filter').hide();
-    $('#icflavortwo-filter').hide();
-    $('#icscoops-filter').on('change', function() {
-      var scoops = ($('#icscoops-filter').val());
-      if(scoops = 1) {
-        $('#icflavorone-filter').show();
-      } else {
-        $('#icflavorone-filter').show();
-        $('#icflavortwo-filter').show();
+    $('#home-container').hide();
+    $($('.container')[0]).show();
+    $('.js-icecream-flavor').hide();
+    $('.scoops-filter').off().on('change', function() {
+      var scoops = ($('.scoops-filter').val());
+      if(scoops == 1) {
+        $($('.js-icecream-flavor')[1]).hide();
+        $($('.js-icecream-flavor')[0]).show();
+      }
+      if(scoops == 2) {
+        $($('.js-icecream-flavor')[0]).show();
+        $($('.js-icecream-flavor')[1]).show();
       }
     })
-    $('#ic-order').on('click', function() {
+    $('#ic-order').off().on('click', function() {
       var curIceCreamOrder = new IceCream ({
-        scoops: $('#icscoops-filter').val(),
-        flavorOne: $('#icflavorone-filter').val(),
-        flavorTwo: $('#icflavortwo-filter').val(),
-        vessel: $('#icvessel-filter').val()
+        scoops: $('.scoops-filter').val(),
+        flavorOne: $($('.js-icecream-flavor')[0]).val(),
+        flavorTwo: $($('.js-icecream-flavor')[1]).val(),
+        vessel: $('.vessel-filter').val()
       });
       console.log(curIceCreamOrder);
     });
-  }
+    $('#ic-cancel').on('click', productController.index);
+  };
 
   module.iceCreamController = iceCreamController;
 })(window);

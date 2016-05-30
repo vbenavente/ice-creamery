@@ -3,14 +3,16 @@
 
 
   milkShakeView.create = function() {
-    $('#milkshake-order-container').show();
-    $('#ms-order').on('click', function() {
+    $('#home-container').hide();
+    $($('.container')[1]).show();
+    $('#ms-order').off().on('click', function() {
       var curMilkShakeOrder = new MilkShake ({
-        flavor: $('#msflavor-filter').val(),
-        richness: $('#richness-filter').val()
+        flavor: $('.js-milkshake-flavor').val(),
+        richness: $('.richness-filter').val()
       });
       console.log(curMilkShakeOrder);
     });
+    $('#ms-cancel').on('click', productController.index);
   }
 
   module.milkShakeView = milkShakeView;
