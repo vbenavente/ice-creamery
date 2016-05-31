@@ -23,12 +23,13 @@
         flavorTwo: $($('.js-icecream-flavor')[1]).val(),
         vessel: $('.vessel-filter').val()
       });
-      console.log(curIceCreamOrder);
       var orderHistory = new Order ({
         type: "ice cream",
         data: curIceCreamOrder
       });
       Order.orders.push(orderHistory);
+      $('#order-history-table').children().remove();
+      orderView.makeTable(Order.orders);
     });
     $('#ic-cancel').on('click', productController.index);
   };

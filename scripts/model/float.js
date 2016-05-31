@@ -6,7 +6,7 @@
     this.flavorThree = opts.flavorThree;
     this.flavorFour = opts.flavorFour;
     this.flavorFive = opts.flavorFive;
-    this.soad = opts.soda;
+    this.soda = opts.soda;
     this.discount = 0.10;
     this.price = opts.scoops * 1.5;
     this.total = this.price - this.discount;

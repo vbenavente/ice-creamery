@@ -25,10 +25,10 @@
 
   orderView.makeTable = function(order) {
     var orderTable = document.getElementById("order-history-table");
-    var orderTableHeader = orderView.generateHeadingRow(['Order Date', 'Treat Type', 'Order Info']);
+    var orderTableHeader = orderView.generateHeadingRow(['Order Date', 'Treat Type', 'Price', 'Discount', 'Total', 'Scoops', 'Flavor One', 'Flavor Two', 'Flavor Three', 'Flavor Four', 'Flavor Five', 'Richness', 'Soda']);
     orderTable.appendChild(orderTableHeader);
     for(var i = 0; i < Order.orders.length; i++) {
-      var orderTreatRow = orderView.generateDataRow([Order.orders[i].date, Order.orders[i].type, (JSON.stringify(Order.orders[i].data))]);
+      var orderTreatRow = orderView.generateDataRow([Order.orders[i].date.toDateString(), Order.orders[i].type, ('$'+ (JSON.stringify(Order.orders[i].data.price))), ('$' + (JSON.stringify(Order.orders[i].data.discount))), ('$' + (JSON.stringify(Order.orders[i].data.total))), (JSON.stringify(Order.orders[i].data.scoops)), (JSON.stringify(Order.orders[i].data.flavorOne)), (JSON.stringify(Order.orders[i].data.flavorTwo)), (JSON.stringify(Order.orders[i].data.flavorThree)), (JSON.stringify(Order.orders[i].data.flavorFour)), (JSON.stringify(Order.orders[i].data.flavorFive)), (JSON.stringify(Order.orders[i].data.richness)), (JSON.stringify(Order.orders[i].data.soda))]);
       orderTable.appendChild(orderTreatRow);
     }
   }
