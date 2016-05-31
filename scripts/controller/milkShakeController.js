@@ -17,8 +17,12 @@
       Order.orders.push(orderHistory);
       $('#order-history-table').children().remove();
       orderView.makeTable(Order.orders);
+      $($('.container')[1]).hide();
+      $('#order-history-table').show();
+      $('#more-treats').show();
     });
     $('#ms-cancel').on('click', productController.index);
+    $('#more-treats').on('click', productController.index);
   }
 
   module.milkShakeView = milkShakeView;
