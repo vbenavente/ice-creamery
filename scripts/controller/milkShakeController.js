@@ -7,7 +7,7 @@
     $($('.container')[1]).show();
     $('#ms-order').off().on('click', function() {
       var curMilkShakeOrder = new MilkShake ({
-        flavor: $('.js-milkshake-flavor').val(),
+        flavorOne: $('.js-milkshake-flavor').val(),
         richness: $('.richness-filter').val()
       });
       var orderHistory = new Order ({
