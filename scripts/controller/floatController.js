@@ -7,7 +7,6 @@
     $($('.container')[2]).show();
     $('.js-float-flavor').hide();
     $('.float-scoops-filter').off().on('change', function() {
-      console.log($('.float-scoops-filter').val());
       var scoops = ($('.float-scoops-filter').val());
       if(scoops == 1) {
         $($('.js-float-flavor')[1]).hide();
@@ -55,12 +54,13 @@
         flavorFive: $($('.js-float-flavor')[4]).val(),
         soda: $('.soda-filter').val()
       });
-      console.log('Float', curFloatOrder);
       var orderHistory = new Order ({
         type: "float",
         data: curFloatOrder
       });
       Order.orders.push(orderHistory);
+      $('#order-history-table').children().remove();
+      orderView.makeTable(Order.orders);
     });
     $('#fl-cancel').on('click', productController.index);
   };

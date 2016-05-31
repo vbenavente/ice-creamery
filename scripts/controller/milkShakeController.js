@@ -10,12 +10,13 @@
         flavor: $('.js-milkshake-flavor').val(),
         richness: $('.richness-filter').val()
       });
-      console.log(curMilkShakeOrder);
       var orderHistory = new Order ({
         type: "milk shake",
         data: curMilkShakeOrder
       });
       Order.orders.push(orderHistory);
+      $('#order-history-table').children().remove();
+      orderView.makeTable(Order.orders);
     });
     $('#ms-cancel').on('click', productController.index);
   }
