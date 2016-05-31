@@ -12,7 +12,7 @@ Victor Benavente
 -As a stakeholder, I want to offer a discount of $0.10 on only milkshakes and floats.  
 
 ## Developer Stories  
--As a developer, I want to build an object constructor for each item offered.
+-As a developer, I want to build an object constructor for each item offered.  
 -As a developer, I want to create a new instance of each order object based on user input.  
 -As a developer, I want to display the order history in table to show relevant order info.  
 
