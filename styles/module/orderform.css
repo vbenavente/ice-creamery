@@ -1,0 +1,12 @@
+ul {
+  list-style-type: none;
+}
+
+table, th, tr, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.more {
+  padding: 10px;
+}
