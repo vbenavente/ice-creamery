@@ -61,8 +61,12 @@
       Order.orders.push(orderHistory);
       $('#order-history-table').children().remove();
       orderView.makeTable(Order.orders);
+      $($('.container')[2]).hide();
+      $('#order-history-table').show();
+      $('#more-treats').show();
     });
     $('#fl-cancel').on('click', productController.index);
+    $('#more-treats').on('click', productController.index);
   };
 
   module.floatController = floatController;
